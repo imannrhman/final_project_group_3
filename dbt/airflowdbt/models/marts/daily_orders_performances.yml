@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: daily_orders_performances
+    descriptions: Show data daily orders for analisys
+    columns:
+      - name: date_day
+        tests:
+          - not_null
+          - unique
+      - name: total_amount
+      - name: total_purchase
+      - name: total_orders
+      - name: total_coupon_used
+
+
+
+    

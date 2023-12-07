@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: daily_sales_revenue
+    descriptions: Show data daily sales revenue
+    columns:
+      - name: date_day
+        tests:
+          - not_null
+          - unique
+      - name: total_sales
+      - name: total_revenue
+      - name: total_coupon_used
+
+
+
+    

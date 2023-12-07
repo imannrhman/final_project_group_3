@@ -47,25 +47,42 @@ if curl -s http://$1/api/session/properties | jq -r '."setup-token"' | grep -ioE
         --data-binary @file2.json \
     http://$1/api/session | jq -r '."id"') && \
     #
-    echo 'Setting up data warehouse source' && \
-    echo "
-    {
-        'engine': 'postgres',
-        'name': 'Postgres DW',
-        'details': {
-            'host':'$DW_POSTGRES_CONTAINER_NAME',
-            'port':'$DW_POSTGRES_PORT',
-            'user':'$DW_POSTGRES_USER',
-            'password':'$DW_POSTGRES_PASSWORD',
-            'db':'$DW_POSTGRES_DB'
+    echo 'Get List Database' && \
+    total=$(curl -s GET \
+        -H "Content-Type: application/json" \
+        -H "X-Metabase-Session: ${sessionToken}" \
+    http://$1/api/database | jq -r '."total"') && \
+
+    echo "Total Database : ${total}" \
+    echo 'Check Database total < 2' && \
+    echo 'WOY' && \
+
+    if [ $total -gt 1 ];
+    then 
+        echo "Max Database Created";
+    else \
+    #
+        echo 'Setting up data warehouse source' && \
+        echo "
+        {
+            'engine': 'postgres',
+            'name': 'Postgres DW',
+            'details': {
+                'host':'host.docker.internal',
+                'port':'$DW_POSTGRES_PORT',
+                'user':'$DW_POSTGRES_USER',
+                'password':'$DW_POSTGRES_PASSWORD',
+                'db':'$DW_POSTGRES_DB'
+            }
         }
-    }
-    " > file.json && \
-    sed 's/'\''/\"/g' file.json > file2.json && \
-    cat file2.json && \
-    curl -s -X POST \
-    -H "Content-type: application/json" \
-    -H "X-Metabase-Session: ${sessionToken}" \
-    http://$1/api/database \
-    --data-binary @file2.json && \
-echo ' < Admin session token, exiting';fi
+        " > file.json && \
+        sed 's/'\''/\"/g' file.json > file3.json && \
+        cat file3.json && \
+        curl -s -X POST \
+        -H "Content-type: application/json" \
+        -H "X-Metabase-Session: ${sessionToken}" \
+        http://$1/api/database \
+        --data-binary @file3.json && \
+    echo ' < Admin session token, exiting';
+    fi 
+fi

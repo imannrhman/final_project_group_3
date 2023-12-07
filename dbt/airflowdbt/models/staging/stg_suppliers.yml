@@ -1,0 +1,9 @@
+models:
+  - name: stg_suppliers
+    description: Suppliers Data.
+    columns:
+      - name: suppliers_id
+        description: The unique key for each Suppliers.
+        tests:
+          - not_null
+          - unique

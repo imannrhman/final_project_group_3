@@ -1,0 +1,9 @@
+models:
+  - name: stg_product_categories
+    description: Product Categories.
+    columns:
+      - name: product_categories_id
+        description: The unique key for each Product Categories.
+        tests:
+          - not_null
+          - unique

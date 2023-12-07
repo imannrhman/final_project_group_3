@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw
+    database: data_warehouse
+    schema: public
+    tables:  
+      - name: coupons
+      - name: customers
+      - name: login_attemps
+      - name: order_items
+      - name: orders
+      - name: product_categories
+      - name: products
+      - name: suppliers

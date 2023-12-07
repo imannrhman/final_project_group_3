@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: daily_percentage_coupons_used
+    descriptions: Show data daily coupons percentage used
+    columns:
+      - name: date_day
+        tests:
+          - not_null
+          - unique
+      - name: total_coupon_used
+      - name: total_order
+      - name: percentage_coupon_used
+
+
+
+    

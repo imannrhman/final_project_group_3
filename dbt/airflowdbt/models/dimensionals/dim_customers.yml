@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: dim_customers
+    descriptions: Dimensional Customers
+    columns:
+      - name: customers_id
+        tests:
+          - not_null
+          - unique
+      - name: full_name
+        tests:
+          - not_null
+      - name: gender
+      - name: address
+      - name: zip_code
+
+    

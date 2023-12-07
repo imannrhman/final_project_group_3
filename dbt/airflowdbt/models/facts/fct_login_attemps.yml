@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fct_login_attemps
+    descriptions: Fact Table Login Attemps
+    columns:
+      - name: customers_id
+        tests:
+          - unique
+          - not_null
+      - name: user
+        tests:
+          - not_null
+      - name: last_login_id
+        tests:
+          - unique
+      - name: login_success
+      - name: login_failed
+      - name: last_login_attemps
+
+
+
+    

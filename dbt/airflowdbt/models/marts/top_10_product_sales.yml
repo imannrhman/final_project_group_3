@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: top_10_product_sales
+    descriptions: Show data order by status
+    columns:
+      - name: products_id
+        tests:
+          - not_null
+          - unique
+      - name: product_name
+      - name: category
+      - name: suppliers 
+      - name: total_order
+      - name: product_per_price
+      - name: total_qty_sales
+      - name: revenue_product
+      - name: coupon_used
+
+
+
+    

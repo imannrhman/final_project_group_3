@@ -1,0 +1,9 @@
+models:
+  - name: stg_orders
+    description: Orders.
+    columns:
+      - name: orders_id
+        description: The unique key for each Orders.
+        tests:
+          - not_null
+          - unique

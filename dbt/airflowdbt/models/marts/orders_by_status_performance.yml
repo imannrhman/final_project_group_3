@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: orders_by_status_performance
+    descriptions: Show data order by status
+    columns:
+      - name: status
+        tests:
+          - not_null
+          - unique
+      - name: total_orders
+      - name: total_amount
+      - name: total_purchase 
+      - name: total_coupon_used 
+
+
+
+    

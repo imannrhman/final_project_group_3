@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: fct_sales_order
+    descriptions: Fact Table Sales Order
+    columns:
+      - name: orders_id
+        tests:
+          - unique
+          - not_null
+      - name: status
+      - name: customers_id
+      - name: customer_name
+      - name: customer_gender
+      - name: order_address
+      - name: order_zip_code
+      - name: total_amount
+      - name: using_coupon
+      - name: revenue
+      - name: order_date
+
+
+
+
+    

@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "dibimbing-km-final-project"
+version = "0.1.0"
+description = "Final Project by Kelompok 3"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.9.18"
+apache-airflow = "^2.7.3"
+apache-airflow-providers-postgres = "^5.8.0"
+dbt-postgres = "^1.7.3"
+pandas = "^2.1.3"
+astronomer-cosmos = "^1.2.5"
+polars = "^0.19.19"
+pyarrow = "^14.0.1"
+xlrd = "^2.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

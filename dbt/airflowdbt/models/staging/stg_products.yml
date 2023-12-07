@@ -1,0 +1,9 @@
+models:
+  - name: stg_products
+    description: Products.
+    columns:
+      - name: products_id
+        description: The unique key for each Products.
+        tests:
+          - not_null
+          - unique

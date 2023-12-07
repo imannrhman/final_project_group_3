@@ -1,0 +1,12 @@
+default:
+  target: dev 
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DW_POSTGRES_HOST') }}"
+      user: "{{ env_var('DW_POSTGRES_USER') }}"
+      pass: "{{ env_var('DW_POSTGRES_PASSWORD') }}"
+      port: "{{ env_var('DW_POSTGRES_PORT') }}"
+      dbname: "{{ env_var('DW_POSTGRES_DB') }}" # or database instead of dbname
+      schema: public
+      threads: 8

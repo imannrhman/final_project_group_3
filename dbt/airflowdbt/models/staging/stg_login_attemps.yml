@@ -1,0 +1,9 @@
+models:
+  - name: stg_login_attemps
+    description: Login Attemps Data.
+    columns:
+      - name: login_attemps_id
+        description: The unique key for each Login Attemps.
+        tests:
+          - not_null
+          - unique

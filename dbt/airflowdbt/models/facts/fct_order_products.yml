@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: fct_order_products
+    descriptions: Fact Table Order Products
+    columns:
+      - name: order_items_id
+        tests:
+          - unique
+          - not_null
+      - name: products_id
+        tests:
+          - not_null
+      - name: product_name
+        tests:
+          - not_null
+      - name: product_price
+        tests:
+          - not_null
+      - name: category
+        tests:
+          - not_null
+      - name: supplier_name
+        tests:
+          - not_null
+      - name: supplier_location
+        tests:
+          - not_null
+      - name: orders_id
+      - name: amount
+      - name: total
+      - name: use_coupons
+      - name: discount
+      - name: fix_total
+
+
+
+    

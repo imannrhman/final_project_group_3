@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: daily_orders_by_status_performance
+    descriptions: Show data daily orders by status
+    columns:
+      - name: date_day
+        tests:
+          - not_null
+      - name: status
+      - name: total_amount
+      - name: total_purchase
+      - name: total_orders
+      - name: total_coupon_used
+
+
+
+    

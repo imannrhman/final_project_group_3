@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_coupons
+    descriptions: Dimensional Coupons
+    columns:
+      - name: coupons_id
+        tests:
+          - not_null
+          - unique
+      - name: discount_percent
+
+
+
+    

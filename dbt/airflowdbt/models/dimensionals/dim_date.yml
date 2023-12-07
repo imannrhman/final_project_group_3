@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: dim_date
+    descriptions: Dimensional Dates
+    columns:
+      - name: date_day
+          - not_null
+          - unique
+      - name: day_of_week
+      - name: day_of_week_name_short 
+      - name: day_of_month
+      - name: day_of_year
+      - name: week_start_date
+      - name: week_end_date
+      - name: week_of_year
+      - name: month_of_year
+      - name: month_name
+      - name: month_name_short
+      - name: month_end_date
+      - name: quarter_of_year
+      - name: quarter_start_date
+      - name: quarter_end_date
+      - name: year_number
+      - name: year_start_date
+      - name: year_end_date
+
+
+    

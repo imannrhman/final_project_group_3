@@ -1,0 +1,9 @@
+models:
+  - name: stg_coupons
+    description: Coupons data with basic cleaning and transformation applied, one row per coupons.
+    columns:
+      - name: coupons_id
+        description: The unique key for each coupons.
+        tests:
+          - not_null
+          - unique

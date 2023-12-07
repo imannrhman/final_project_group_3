@@ -1,0 +1,9 @@
+models:
+  - name: stg_order_items
+    description: Order Items Data.
+    columns:
+      - name: order_items_id
+        description: The unique key for each Order Items.
+        tests:
+          - not_null
+          - unique

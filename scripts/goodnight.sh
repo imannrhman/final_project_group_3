@@ -10,3 +10,4 @@ if [[   $(docker ps --filter name=dataeng* -aq) ]]; then
 else
     echo "All Cleaned UP!"
 fi
+
