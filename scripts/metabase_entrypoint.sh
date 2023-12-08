@@ -55,7 +55,6 @@ if curl -s http://$1/api/session/properties | jq -r '."setup-token"' | grep -ioE
 
     echo "Total Database : ${total}" \
     echo 'Check Database total < 2' && \
-    echo 'WOY' && \
 
     if [ $total -gt 1 ];
     then 

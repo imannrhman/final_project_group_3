@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: top_10_suppliers_sales
+    descriptions: Show top suppliers sales
+    columns:
+      - name: supplier_name
+        tests:
+          - unique
+          - not_null
+      - name: supplier_location
+      - name: total_order
+      - name: total_amount_sold
+
+
+    

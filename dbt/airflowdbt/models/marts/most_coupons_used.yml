@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: most_coupons_used
+    descriptions: Show data coupons used 
+    columns:
+      - name: discount
+        tests:
+          - unique
+          - not_null
+      - name: total_order
+      - name: total_discount_given
+
+
+    

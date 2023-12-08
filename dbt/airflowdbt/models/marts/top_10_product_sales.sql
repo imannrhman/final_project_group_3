@@ -1,4 +1,4 @@
-fct_sales_orderwith order_product as (
+with order_product as (
     select * from {{ ref('fct_order_products') }}
 ),
 

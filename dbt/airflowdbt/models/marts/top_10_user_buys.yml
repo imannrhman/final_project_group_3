@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: top_10_user_buys
+    descriptions: Show top 10 user buys
+    columns:
+      - name: customers_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_name,
+      - name: total_orders
+      - name: total_amount
+      - name: total_purchase
+      - name: most_product_buy
+      - name: most_product_buy_id
+
+
+    

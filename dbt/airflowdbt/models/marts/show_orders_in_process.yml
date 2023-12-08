@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: show_orders_in_process
+    descriptions: Show data order only status in process
+    columns:
+      - name: orders_id
+        tests:
+          - not_null
+          - unique
+      - name: status
+      - name: customers_id
+      - name: customer_name
+      - name: customer_gender
+      - name: order_address
+      - name: order_zip_code
+      - name: total_order
+      - name: total_amount
+      - name: total_purchase
+      - name: using_coupon
+      - name: coupon_using
+      - name: fix_total_purchase
+      - name: order_date
+
+
+
+    

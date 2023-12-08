@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: most_product_orders_by_date
+    descriptions: Show product orders by date
+    columns:
+      - name: date_day
+        tests:
+          - not_null
+          - unique
+      - name: total_amount
+      - name: total_orders
+      - name: most_product_buy
+      - name: most_product_buy_id
+
+
+
+    

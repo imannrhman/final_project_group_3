@@ -1,7 +1,7 @@
 #!/bin/bash
 airflow db init
 echo "AUTH_ROLE_PUBLIC = 'Admin'" >> webserver_config.py
-airflow users  create --role Admin --username admin --email admin --firstname admin --lastname admin --password admin
+
 airflow connections add 'postgres_ops' \
     --conn-type 'postgres' \
     --conn-login $POSTGRES_USER \

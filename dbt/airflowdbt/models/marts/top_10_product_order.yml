@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: top_10_product_order
-    descriptions: Show data order by status
+    descriptions: Show top 10 product order
     columns:
       - name: products_id
         tests:

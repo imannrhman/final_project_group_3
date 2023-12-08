@@ -3,7 +3,7 @@ with order_product as (
 ),
 
 sales as (
-    select * from {{ ref('fct_sales_order') }}
+    select * from {{ ref('fct_orders') }}
 ),
 
 joined_order as (

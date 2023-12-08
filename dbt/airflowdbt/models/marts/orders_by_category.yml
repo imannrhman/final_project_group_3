@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: orders_by_category
+    descriptions: Show Orders by Category
+    columns:
+      - name: category
+        tests:
+          - unique
+          - not_null
+      - name: total_order
+      - name: total_qty_sold
+      - name: total_revenue
+      - name: total_male_buy
+      - name: total_female_buy
+      
+
+
+
+
+    

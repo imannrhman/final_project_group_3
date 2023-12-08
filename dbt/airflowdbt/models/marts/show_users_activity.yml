@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: show_users_activity
+    descriptions: Show data users activity 
+    columns:
+      - name: customers_id
+        tests:
+          - not_null
+          - unique
+      - name: full_name
+      - name: total_orders
+      - name: total_spent
+      - name: login_success
+      - name: login_failed
+      - name: last_login_attemps
+   
+
+
+
+    

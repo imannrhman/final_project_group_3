@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: products_sales_by_gender
+    descriptions: Show product sales by gender
+    columns:
+      - name: customer_gender
+        tests:
+          - not_null
+      - name: customer_name
+      - name: product_name
+      - name: category
+      - name: total_qty
+      - name: total_spent
+      - name: order_date
+
+
+
+    
